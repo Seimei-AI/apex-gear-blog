@@ -45,6 +45,14 @@ header.site-header a.logo span {
   color: var(--accent);
 }
 
+header.site-header a.logo::before {
+  content: "◆";
+  display: inline-block;
+  color: #7fd8ff;
+  margin-right: 6px;
+  font-size: 0.85em;
+}
+
 header.site-header nav a {
   color: var(--text-muted);
   text-decoration: none;
@@ -94,6 +102,40 @@ main {
 
 .hero {
   padding: 40px 0 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: -70px;
+  right: -50px;
+  width: 240px;
+  height: 240px;
+  background: radial-gradient(circle, var(--accent-soft), transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: -60px;
+  left: -60px;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(127, 216, 255, 0.12), transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero h1,
+.hero p.lead {
+  position: relative;
+  z-index: 1;
 }
 
 .hero h1 {
@@ -105,6 +147,15 @@ main {
 .hero p.lead {
   color: var(--text-muted);
   font-size: 1rem;
+}
+
+/* 記事一覧・スペック表のアイコン */
+.item-icon {
+  margin-right: 8px;
+}
+
+.spec-table .spec-icon {
+  margin-right: 8px;
 }
 
 article h1 {

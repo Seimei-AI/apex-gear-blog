@@ -45,6 +45,47 @@ header.site-header a.logo span {
   color: var(--accent);
 }
 
+header.site-header nav a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+header.site-header nav a:hover {
+  color: var(--accent);
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 2.4em;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.back-link:hover {
+  color: var(--accent);
+}
+
+.profile-block {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 1.6em 0;
+}
+
+.profile-block .avatar {
+  flex-shrink: 0;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--accent-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+}
+
 main {
   max-width: var(--max-width);
   margin: 0 auto;
